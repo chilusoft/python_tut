@@ -1,0 +1,13 @@
+{% block content %}
+	<h1>Users list</h1>
+
+	{% for u in user %}
+		<table>
+			<tr><td>User Name</td><td>{{ u.username }}</td></tr>
+			<tr><td>Date Joined</td><td>{{u.date_added }}<td></tr>			
+		</table>
+	{% empty %}
+		<p>No User Exist</p>
+	{% endfor %}
+	
+{% endblock content %}
